@@ -18,7 +18,15 @@ _This webpage application takes numerical input, loops through it and outputs a 
     Input: 5
     Output: 0, 1, 2, 3, 4, 5
 
-3.  
+3.  The program replaces any number containing a 3 in any digit with "Won't you be my neighbor?".
+    Input: 13
+    Output: 0, 1, 2, "Won't you be my neighbor?", 4, 5, 6, 7, 8, 9, 10, 11, 12, "Won't you be my neighbor?".
+
+4.  The program replaces any number containing a 2 in any digit unless it contains a 3 with "Boop!".
+    Input: 2 / 23
+    Output: 0, 1, "Boop!" / ..., 19, "Boop!", "Boop!", "Boop!", "Won't you be my neighbor?".
+
+
 
 ## Setup/Installation Requirements
 
