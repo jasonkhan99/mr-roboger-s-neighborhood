@@ -3,7 +3,8 @@ function roboResponse(roboCount) {
   if (roboCount < 0 || roboCount % 1 !== 0) {
     return "Please enter a Whole Number.";
   } else {
-    return false;
+    let array = [];
+    array.push(roboCount);
   }
 }
 
