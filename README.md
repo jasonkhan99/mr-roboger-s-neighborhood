@@ -10,11 +10,15 @@ _This webpage application takes numerical input, loops through it and outputs a 
 
 ## Specs
 
-1.  The program returns a message if user inputs anything other than a positive whole number not separated by commas
+1.  The program returns a message if user inputs anything other than a positive whole number not separated by commas.
     Input: -1 / 3.5 / apple
     Output: Please enter a positive whole number.
 
-2.  
+2.  The program returns a range of numbers from 0 to the users inputted number.
+    Input: 5
+    Output: 0, 1, 2, 3, 4, 5
+
+3.  
 
 ## Setup/Installation Requirements
 
