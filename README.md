@@ -26,7 +26,9 @@ _This webpage application takes numerical input, loops through it and outputs a 
     Input: 2 / 23
     Output: 0, 1, "Boop!" / ..., 19, "Boop!", "Boop!", "Boop!", "Won't you be my neighbor?".
 
-
+5.  The program replaces any number containing a 1 in any digit unless it contains a 2 or 3 with "Beep!".
+    Input: 13
+    Output: 0, "Beep!", "Boop!", "Won't you be my neighbor?", 4, 5, 6, 7, 8, 9, "Beep!", "Beep!", "Boop!", "Won't you be my neighbor?".
 
 ## Setup/Installation Requirements
 
