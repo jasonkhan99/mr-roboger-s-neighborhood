@@ -6,7 +6,12 @@ function roboResponse(countdownNumber) {
     let countdownArray = [];
     countdownArray.push(countdownNumber);
     console.log(countdownArray);
-    
+    while (countdownArray[countdownArray.length - 1] >= 0) {
+      for (let i = 0; i < countdownArray.length; i++) {
+        countdownArray.push(countdownArray[i] - 1);
+        console.log(countdownArray);
+      }
+    }
   }
 }
 
