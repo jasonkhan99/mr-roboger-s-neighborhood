@@ -11,13 +11,13 @@
 //       if (countdownArray[i] === -1) {
 //         break;
 //       }
-//       let replace3Array = countdownArray.slice();
-//       for (let i = 0; replace3Array.length > i; i++) {
-//         if (replace3Array[i].toString().includes("3")) {
-//           replace3Array.splice(i, 1, "Won't you be my neighbor?");
+//       let replaceArray = countdownArray.slice();
+//       for (let i = 0; replaceArray.length > i; i++) {
+//         if (replaceArray[i].toString().includes("3")) {
+//           replaceArray.splice(i, 1, "Won't you be my neighbor?");
 //         }
 //       }
-//       console.log(replace3Array);
+//       console.log(replaceArray);
 //     }
 //   }
 // }
@@ -27,21 +27,20 @@ function roboResponse(countdownNumber) {
     return "Please enter a Whole Number.";
   } else {
     let countdownArray = [];
-    let i = 0;
     countdownArray.push(countdownNumber);
     while (countdownArray[0] > 0) {
-      countdownArray.unshift(countdownArray[i] - 1);
-      let replace3Array = countdownArray.slice();
-      for (let i = 0; replace3Array.length > i; i++) {
-        if (replace3Array[i].toString().includes("3")) {
-          replace3Array.splice(i, 1, "Won't you be my neighbor?");
-        } else if (replace3Array[i].toString().includes("2")) {
-          replace3Array.splice(i, 1, "Bloop!");
-        } else if (replace3Array[i].toString().includes("1")) {
-          replace3Array.splice(i, 1, "Bleep!");
+      countdownArray.unshift(countdownArray[0] - 1);
+      let replaceArray = countdownArray.slice();
+      for (let i = 0; replaceArray.length > i; i++) {
+        if (replaceArray[i].toString().includes("3")) {
+          replaceArray.splice(i, 1, "Won't you be my neighbor?");
+        } else if (replaceArray[i].toString().includes("2")) {
+          replaceArray.splice(i, 1, "Bloop!");
+        } else if (replaceArray[i].toString().includes("1")) {
+          replaceArray.splice(i, 1, "Bleep!");
         }
       }
-      console.log(replace3Array);
+      console.log(replaceArray);
     }
   }
 }
@@ -50,10 +49,8 @@ function roboResponse(countdownNumber) {
 $(document).ready(function() {
   $("form#formInput").submit(function(event) {
     event.preventDefault();
-    const countdownNumber = parseFloat($("input#userNumberInput").val());
+    const countdownNumber = parseFloat($("input#userNumberInput").val()); 
     const output = roboResponse(countdownNumber);
-    console.log(countdownNumber);
     $("#output").text(output);
-
   });
 });
