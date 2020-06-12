@@ -35,6 +35,8 @@ function roboResponse(countdownNumber) {
       for (let i = 0; replace3Array.length > i; i++) {
         if (replace3Array[i].toString().includes("3")) {
           replace3Array.splice(i, 1, "Won't you be my neighbor?");
+        } else if (replace3Array[i].toString().includes("2")) {
+          replace3Array.splice(i, 1, "Bloop!");
         }
       }
       console.log(replace3Array);
