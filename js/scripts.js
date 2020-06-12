@@ -1,10 +1,12 @@
 //Business Logic
-function roboResponse(roboCount) {
-  if (roboCount < 0 || roboCount % 1 !== 0) {
+function roboResponse(countdownNumber) {
+  if (countdownNumber < 0 || countdownNumber % 1 !== 0) {
     return "Please enter a Whole Number.";
   } else {
-    let array = [];
-    array.push(roboCount);
+    let countdownArray = [];
+    countdownArray.push(countdownNumber);
+    console.log(countdownArray);
+    
   }
 }
 
@@ -12,8 +14,9 @@ function roboResponse(roboCount) {
 $(document).ready(function() {
   $("form#formInput").submit(function(event) {
     event.preventDefault();
-    const roboCount = parseFloat($("input#userNumberInput").val());
-    const output = roboResponse(roboCount);
+    const countdownNumber = parseFloat($("input#userNumberInput").val());
+    const output = roboResponse(countdownNumber);
+    console.log(countdownNumber);
     $("#output").text(output);
 
   });
