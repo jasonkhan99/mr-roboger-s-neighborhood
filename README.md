@@ -8,6 +8,14 @@
 
 _This webpage application takes numerical input, loops through it and outputs a robotic mr rogers response._
 
+## Specs
+
+1.  The program returns a message if user inputs anything other than a positive whole number not separated by commas
+    Input: -1 / 3.5 / apple
+    Output: Please enter a positive whole number.
+
+2.  
+
 ## Setup/Installation Requirements
 
 Software Requirements
