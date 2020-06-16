@@ -30,7 +30,7 @@ function roboResponse(countdownNumber) {
     countdownArray.push(countdownNumber);
     while (countdownArray[0] > 0) {
       countdownArray.unshift(countdownArray[0] - 1);
-      let replaceArray = countdownArray.slice();
+      var replaceArray = countdownArray.slice();
       for (let i = 0; replaceArray.length > i; i++) {
         if (replaceArray[i].toString().includes("3")) {
           replaceArray.splice(i, 1, "Won't you be my neighbor?");
@@ -40,10 +40,11 @@ function roboResponse(countdownNumber) {
           replaceArray.splice(i, 1, "Bleep!");
         }
       }
-      console.log(replaceArray);
     }
+    return replaceArray.join(", ");
   }
 }
+
 
 // User Logic
 $(document).ready(function() {
