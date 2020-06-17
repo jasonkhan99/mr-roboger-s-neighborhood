@@ -1,28 +1,5 @@
-//Business Logic
-
-// function roboResponse(countdownNumber) {
-//   if (countdownNumber < 0 || countdownNumber % 1 !== 0) {
-//     return "Please enter a Whole Number.";
-//   } else {
-//     let countdownArray = [];
-//     countdownArray.push(countdownNumber);
-//     for (let i = countdownArray.length - 1; i >= 0; i = 0) {
-//       countdownArray.unshift(countdownArray[i] - 1);
-//       if (countdownArray[i] === -1) {
-//         break;
-//       }
-//       let replaceArray = countdownArray.slice();
-//       for (let i = 0; replaceArray.length > i; i++) {
-//         if (replaceArray[i].toString().includes("3")) {
-//           replaceArray.splice(i, 1, "Won't you be my neighbor?");
-//         }
-//       }
-//       console.log(replaceArray);
-//     }
-//   }
-// }
-
 function roboResponse(countdownNumber) {
+  let replaceArray = [];
   if (countdownNumber < 0 || countdownNumber % 1 !== 0) {
     return "Please enter a Whole Number.";
   } else {
@@ -30,7 +7,7 @@ function roboResponse(countdownNumber) {
     countdownArray.push(countdownNumber);
     while (countdownArray[0] > 0) {
       countdownArray.unshift(countdownArray[0] - 1);
-      var replaceArray = countdownArray.slice();
+      replaceArray = countdownArray.slice();
       for (let i = 0; replaceArray.length > i; i++) {
         if (replaceArray[i].toString().includes("3")) {
           replaceArray.splice(i, 1, "Won't you be my neighbor?");
@@ -45,8 +22,6 @@ function roboResponse(countdownNumber) {
   }
 }
 
-
-// User Logic
 $(document).ready(function() {
   $("form#formInput").submit(function(event) {
     event.preventDefault();
